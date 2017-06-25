@@ -1,0 +1,23 @@
+version: '3.1'
+services:
+  web:
+    build: .
+    volumes:
+      - ./web:/var/www/html
+      - ./php.ini:/usr/local/etc/php/conf.d/evekb.ini
+    ports:
+      - 8736:80
+    links:
+      - mysql
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:5.5
+    environment:
+      MYSQL_DATABASE: evekb
+      MYSQL_ROOT_PASSWORD: evekb
+      MYSQL_USER: evekb
+      MYSQL_PASSWORD: evekb
+    volumes:
+      - ./mysql:/var/lib/mysql

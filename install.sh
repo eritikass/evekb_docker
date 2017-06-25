@@ -1,3 +1,5 @@
+#!/bin/bash
+
 set -ex
 
 EVEKB_VERSION=4.2.32.0

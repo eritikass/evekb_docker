@@ -1,0 +1,11 @@
+# TODO: move to hourly later, atm after every 5min to fetch old kills
+*/3 * * * * curl "http://web:80/cron/cron_zkb.php" >> /tmp/cronlogs
+
+# Hourly
+16 * * * * curl "http://web:80/cron/cron_feed.php" >> /tmp/cronlogs
+26 * * * * curl "http://web:80/cron/cron_api.php" >> /tmp/cronlogs
+
+# Daily
+36 3 * * * curl "http://web:80/cron/cron_clearup.php" >> /tmp/cronlogs
+46 4 * * * curl "http://web:80/cron/cron_value.php" >> /tmp/cronlogs
+56 5 * * * curl "http://web:80/cron/cron_cache.php" >> /tmp/cronlogs

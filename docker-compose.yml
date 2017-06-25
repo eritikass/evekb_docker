@@ -12,6 +12,7 @@ services:
       - 8736:80
     links:
       - mysql
+      - redis
     depends_on:
       - mysql
 
@@ -39,3 +40,9 @@ services:
       MYSQL_PASSWORD: evekb
     volumes:
       - ./mysql:/var/lib/mysql
+
+  redis:
+    image: redis:3.2-alpine
+    restart: always
+    volumes:
+      - ./redis:/data

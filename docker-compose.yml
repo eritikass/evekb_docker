@@ -4,6 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-web
+    restart: always
     volumes:
       - ./web:/var/www/html
       - ./php.ini:/usr/local/etc/php/conf.d/evekb.ini
@@ -18,6 +19,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-cron
+    restart: always
     volumes:
       - ./crontab.sh:/crontab.sh
       - ./crontab:/etc/cron.d/evekb
@@ -29,6 +31,7 @@ services:
 
   mysql:
     image: mysql:5.5
+    restart: always
     environment:
       MYSQL_DATABASE: evekb
       MYSQL_ROOT_PASSWORD: evekb

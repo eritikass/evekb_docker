@@ -22,13 +22,12 @@ services:
       dockerfile: Dockerfile-cron
     restart: always
     volumes:
-      - ./crontab.sh:/crontab.sh
       - ./crontab:/etc/cron.d/evekb
     links:
       - web
     depends_on:
       - web
-    command: /crontab.sh
+    command: sh -c "touch /tmp/cronlogs && crond -s /etc/cron.d -b -L /tmp/cronlogs && tail -f /tmp/cronlogs"
 
   mysql:
     image: mysql:5.5

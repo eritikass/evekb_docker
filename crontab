@@ -1,4 +1,4 @@
-# TODO: move to hourly later, atm after every 5min to fetch old kills
+# TODO: move to hourly later, atm after every 3min to fetch old kills
 */3 * * * * curl "http://web:80/cron/cron_zkb.php" >> /tmp/cronlogs
 
 # Hourly

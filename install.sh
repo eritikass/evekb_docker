@@ -4,13 +4,16 @@ set -ex
 
 EVEKB_VERSION=4.2.32.0
 
-wget http://evekb.org/downloads/EDK${EVEKB_VERSION}.zip
+if [[!-d web]]; then
+  # download edk if no web directory exists
+  wget http://evekb.org/downloads/EDK${EVEKB_VERSION}.zip
 
-unzip EDK${EVEKB_VERSION}.zip -d tmp
-mv tmp/evedev-kb-* web
-rm -fr tmp EDK*.zip
+  unzip EDK${EVEKB_VERSION}.zip -d tmp
+  mv tmp/evedev-kb-* web
+  rm -fr tmp EDK*.zip
 
-touch web/kbconfig.php
+  touch web/kbconfig.php
+fi
 
 docker-compose build
 docker-compose up -d

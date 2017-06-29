@@ -15,6 +15,29 @@ if [[!-d web]]; then
   touch web/kbconfig.php
 fi
 
+function downloadMod() {
+  modname=$1
+  modurl=$2
+  dirname=$3
+  if [ -z "$dirname" ]; then
+      dirname=$1
+  fi
+
+  rm -fr tmp
+  mkdir -p tmp
+  wget "$modurl" -O tmp/mod_$modname.zip
+  unzip tmp/mod_$modname.zip -d tmp/mod_$modname
+
+  rm -fr web/mods/$modname
+  cp -r tmp/mod_$modname/$dirname web/mods/$modname
+  rm -fr tmp
+}
+
+# download mods
+downloadMod "mostexp" "http://www.evekb.org/forum/download/file.php?id=1155&sid=9ad499b4c23708f66aef699b848c727d"
+downloadMod "info_links" "https://github.com/Salvoxia/info_links/archive/master.zip" "info_links-master/info_links"
+downloadMod "serverstatus" "http://www.evekb.org/forum/download/file.php?id=1144"
+
 docker-compose build
 docker-compose up -d
 

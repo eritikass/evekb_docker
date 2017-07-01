@@ -32,9 +32,9 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: evekb
-      MYSQL_ROOT_PASSWORD: evekb
       MYSQL_USER: evekb
       MYSQL_PASSWORD: evekb
+      MYSQL_ROOT_PASSWORD: evekb
     volumes:
       - ./mysql:/var/lib/mysql
       - ./mysql.conf:/etc/mysql/conf.d/edk.conf

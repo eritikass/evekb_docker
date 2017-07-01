@@ -2,13 +2,11 @@
 
 Docker setup for [evekb killboard](https://github.com/evekb/evedev-kb).
 
-First time run:
+First time run, to download edk and some mods.
 
 `./install.sh`
 
-This will download edk and some mods, after that just
-
-open your browser: http://your-hostname:8736/ 
+Open edk in http://your-hostname:8736/ and follow instructions for setup.
 
 Start or stop later using:
 

@@ -4,7 +4,7 @@ set -ex
 
 EVEKB_VERSION=4.2.32.0
 
-if [[!-d web]]; then
+if [[ ! -d "web" ]]; then
   # download edk if no web directory exists
   wget http://evekb.org/downloads/EDK${EVEKB_VERSION}.zip
 

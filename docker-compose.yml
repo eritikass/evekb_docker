@@ -7,6 +7,7 @@ services:
     volumes:
       - ./web:/var/www/html
       - ./php.ini:/usr/local/etc/php/conf.d/edk.ini
+      - mysql_shared:/shared
     ports:
       - 8736:80
     links:
@@ -36,9 +37,14 @@ services:
       MYSQL_PASSWORD: evekb
     volumes:
       - ./mysql:/var/lib/mysql
+      - ./mysql.conf:/etc/mysql/conf.d/edk.conf
+      - mysql_shared:/tmp
 
   redis:
     image: redis:3.2-alpine
     restart: always
     volumes:
       - ./redis:/data
+
+volumes:
+  mysql_shared: {}

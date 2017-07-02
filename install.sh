@@ -37,6 +37,7 @@ function downloadMod() {
 # download mods
 downloadMod "mostexp" "http://www.evekb.org/forum/download/file.php?id=1155&sid=9ad499b4c23708f66aef699b848c727d"
 downloadMod "info_links" "https://github.com/Salvoxia/info_links/archive/master.zip" "info_links-master/info_links"
+downloadMod "dotlan_mod" "http://www.evekb.org/forum/download/file.php?id=1113"
 downloadMod "serverstatus" "http://www.evekb.org/forum/download/file.php?id=1144"
 downloadMod "realmoney_mod" "https://github.com/6RUN0/realmoney_mod/archive/master.zip" "realmoney_mod-master"
 downloadMod "pilot_stats" "http://www.evekb.org/forum/download/file.php?id=1417"

@@ -40,6 +40,7 @@ downloadMod "info_links" "https://github.com/Salvoxia/info_links/archive/master.
 downloadMod "serverstatus" "http://www.evekb.org/forum/download/file.php?id=1144"
 downloadMod "realmoney_mod" "https://github.com/6RUN0/realmoney_mod/archive/master.zip" "realmoney_mod-master"
 downloadMod "pilot_stats" "http://www.evekb.org/forum/download/file.php?id=1417"
+downloadMod "advanced_search" "https://github.com/Salvoxia/advanced_search/archive/v2.7.3.zip" "advanced_search-2.7.3/advanced_search"
 
 docker-compose build
 docker-compose up -d

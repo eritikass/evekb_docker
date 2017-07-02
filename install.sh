@@ -39,6 +39,7 @@ downloadMod "mostexp" "http://www.evekb.org/forum/download/file.php?id=1155&sid=
 downloadMod "info_links" "https://github.com/Salvoxia/info_links/archive/master.zip" "info_links-master/info_links"
 downloadMod "serverstatus" "http://www.evekb.org/forum/download/file.php?id=1144"
 downloadMod "realmoney_mod" "https://github.com/6RUN0/realmoney_mod/archive/master.zip" "realmoney_mod-master"
+downloadMod "pilot_stats" "http://www.evekb.org/forum/download/file.php?id=1417"
 
 docker-compose build
 docker-compose up -d

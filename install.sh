@@ -2,7 +2,7 @@
 
 set -ex
 
-// TODO: get latest version from http://evekb.org/downloads/update2.xml
+# TODO: get latest version from http://evekb.org/downloads/update2.xml
 EVEKB_VERSION=4.2.32.0
 
 if [[ ! -d "web" ]]; then

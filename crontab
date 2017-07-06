@@ -1,7 +1,5 @@
-# TODO: move to hourly later, atm after every 10min to fetch old kills
-*/10 * * * * curl -m 60 "http://web:80/cron/cron_zkb.php" >> /tmp/cronlogs
-
 # Hourly
+6 * * * * curl -m 60 "http://web:80/cron/cron_zkb.php" >> /tmp/cronlogs
 16 * * * * curl -m 60 "http://web:80/cron/cron_feed.php" >> /tmp/cronlogs
 26 * * * * curl -m 60 "http://web:80/cron/cron_api.php" >> /tmp/cronlogs
 

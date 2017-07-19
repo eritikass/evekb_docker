@@ -4,7 +4,7 @@ c=$(curl http://localhost:8736)
 
 echo $(date +%Y-%m-%d:%H:%M:%S) " - run" >> cron.log
 
-if [[ $c != *"Unable to connect to mysql database."* ]]; then
+if [[ $c == *"Unable to connect to mysql database."* ]]; then
   echo $c >> cron.log
 fi
 
